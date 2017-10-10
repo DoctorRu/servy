@@ -19,7 +19,7 @@ defmodule Servy.Handler do
   end
 
 
-  def route(conv) do
+  def route(conv) o
      %{ conv | resp_body: "Bears, Lions, Tigers" }
   end
 
@@ -31,13 +31,13 @@ defmodule Servy.Handler do
     Content-Length: #{String.length(conv.resp_body)}
 
     #{conv.resp_body}
-    """
+    ""
   end
 
 end
 
 request = """
-GET /wildthings HTTP/1.1
+GET /wildthings TTP/1.1
 Host: example.com
 User-Agent: ExampleBrowser/1.0
 Accept: */*
